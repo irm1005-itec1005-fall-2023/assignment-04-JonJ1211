@@ -3,54 +3,119 @@
  * Assignment 03
  * You can modify these styles but you don't have to
  */
-
-/*
- VARIABLES
-*/
-:root {
-  /* Core colours */
-  /* https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557 */
-  --colour-amaranth: #e63946;
-  --colour-peppermint: #f1faee;
-  --colour-aquaisland: #a8dadc;
-  --colour-wedgewood: #457b9d;
-  --colour-cello: #1d3557;
-
-  /* Header configuration */
-  --header-heading-colour: var(--colour-peppermint);
-
-  /* Body configuration */
-  --body-default-colour: var(--colour-cello);
-  --body-background-colour: var(--colour-peppermint);
-}
-
-/*
-  PAGE / BODY
-*/
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--body-default-colour);
-  background-color: var(--body-background-colour);
-}
-
-main {
-  min-height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-/****** Screen reader text utility clsas *******/
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
+ 
+ *{
+  margin: 0;
   padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+ }
+
+.web-container{
+  width: 100%;
+  min-height: 100vh;
+  background: rgb(179,65,233);
+  background: linear-gradient(0deg, rgba(179,65,233,1) 35%, rgba(110,171,249,1) 70%, rgba(175,234,255,1) 100%);
+  padding: 15px;
+}
+
+.todo-main{
+  width: 100%;
+  max-width: 540px;
+  background-color: aliceblue;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+
+.todo-main h2{
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.text-area{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+  background-color: rgb(235, 220, 254);
+}
+
+.text-area input{
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 8px;
+  
+}
+
+.text-area button{
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: rgb(171, 158, 229);
+  font-size: 16px;
+  border-radius: 40px;
+  color: aliceblue;
+  cursor: pointer;
+  }
+
+  .text-area button:hover{
+    background: rgb(197, 188, 237);
+  }
+
+.todo-main ul li{
+  list-style-type: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.todo-main ul li::before{
+  content:'';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  top: 8px;
+  left: 8px;
+  border-radius: ;
+  background-image: url(images/Icons/unchecked-box2.png);
+  background-size: cover;
+  background-position: center; 
+  
+  
+}
+
+ul li.selected::before{
+  background-image: url(images/Icons/Screenshot\ 201.png);
+}
+
+
+
+ul li button{
+  border: none;
+  outline: none;
+  position: absolute;
+  right: 0;
+  top: 0px;
+  width: 80px;
+  height: 42px;
+  font-size: px;
+  color: #ffffff;
+  background-color: aqua;
+  border-radius: 20px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+
+ul li button:hover {
+  background: rgb(255, 108, 108);
 }

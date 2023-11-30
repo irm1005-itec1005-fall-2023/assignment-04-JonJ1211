@@ -31,4 +31,3 @@ taskList.addEventListener("click", function (e) {
       e.target.classList.toggle("selected");
     }
   });
-

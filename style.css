@@ -1,21 +1,15 @@
-/*
- * CSS File for the solution
- * Assignment 03
- * You can modify these styles but you don't have to
- */
  
  *{
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
   box-sizing: border-box;
  }
 
 .web-container{
   width: 100%;
   min-height: 100vh;
-  background: rgb(179,65,233);
-  background: linear-gradient(0deg, rgba(179,65,233,1) 35%, rgba(110,171,249,1) 70%, rgba(175,234,255,1) 100%);
+  background-image: url(images/background/winter-landscape-with-frozen-river-pines-and-mountains-illustration-snowy-winter-cartoon-background-vector.jpg);
   padding: 15px;
 }
 
@@ -28,12 +22,14 @@
   border-radius: 10px;
 }
 
+
+
 .todo-main h2{
-  font-family: 'Courier New', Courier, monospace;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
+
 
 .text-area{
   display: flex;
@@ -90,11 +86,16 @@
   background-size: cover;
   background-position: center; 
   
-  
+}
+
+ul li.selected{
+  text-decoration: line-through;
+  color: black;
 }
 
 ul li.selected::before{
   background-image: url(images/Icons/Screenshot\ 201.png);
+  text-decoration: line-through;
 }
 
 
